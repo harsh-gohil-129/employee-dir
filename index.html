@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Directory</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fas fa-users"></i> Employee Directory</h1>
+      <div class="controls">
+        <input type="text" id="search" placeholder="🔍 Search employee..." />
+        <button onclick="showForm()">
+          <i class="fas fa-plus"></i> Add Employee
+        </button>
+      </div>
+
+      <div id="employee-list" class="employee-list"></div>
+
+      <!-- Pagination -->
+      <div id="pagination"></div>
+
+      <!-- Form -->
+      <div id="form-container" class="form-container hidden">
+        <form id="employee-form">
+          <h2 id="form-title"><i class="fas fa-id-card"></i> Add Employee</h2>
+          <input type="hidden" id="employee-id" />
+          <input type="text" id="firstName" placeholder="First Name" required />
+          <input type="text" id="lastName" placeholder="Last Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="text"
+            id="department"
+            placeholder="Department"
+            required
+          />
+          <input type="text" id="role" placeholder="Role" required />
+          <div class="form-buttons">
+            <button type="submit"><i class="fas fa-save"></i> Save</button>
+            <button type="button" onclick="cancelForm()">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./static/js/data.js"></script>
+    <script src="./static/js/app.js"></script>
+  </body>
+</html>
